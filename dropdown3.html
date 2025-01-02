@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: grey;
+        }
+        .dropdown {
+            background-color: rgba(249, 245, 245, 0.927);
+            display: flex;
+            padding: 15px 40px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            gap: 20px; /* Added space between columns */
+        }
+        .dropdown ol {
+            list-style: none;
+        }
+        .dropdown ol li a {
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+            position: relative;
+            transition: color 0.3s ease; /* Smooth transition for text color */
+        }
+
+        .dropdown ol li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px; /* Thickness of the underline */
+            background-color: black;
+            transition: width 0.3s ease; /* Smooth transition for the underline width */
+        }
+
+        .dropdown ol li a:hover {
+            color: #007BFF; /* Change the color on hover (optional) */
+        }
+
+        .dropdown ol li a:hover::after {
+            width: 100%; /* Make the underline span the full width on hover */
+        }
+
+        .dropdown .column {
+            flex: 1; /* Distribute space evenly between columns */
+        }
+        .dropdown .column li {
+            margin-bottom: 8px; /* Space between list items */
+        }
+        .dropdown .column li:first-child {
+            font-weight: bold;
+            margin-bottom: 12px; /* Space for the header */
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <div class="column">
+            <ol>
+                <li>Web Development Courses</li>
+                <li><a href="#">HTML Basics</a></li>
+                <li><a href="#">Advanced HTML Techniques</a></li>
+                <li><a href="#">CSS Fundamentals</a></li>
+                <li><a href="#">CSS Grid and Flexbox</a></li>
+                <li><a href="#">JavaScript for Beginners</a></li>
+                <li><a href="#">Advanced JavaScript Concepts</a></li>
+                <li><a href="#">Responsive Web Design</a></li>
+                <li><a href="#">React.js Essentials</a></li>
+                <li><a href="#">Node.js and Express</a></li>
+                <li><a href="#">Web Accessibility Standards</a></li>
+            </ol>
+        </div>
+        <div class="column">
+            <ol>
+                <li>Software Development Courses</li>
+                <li><a href="#">Introduction to Programming</a></li>
+                <li><a href="#">Python for Beginners</a></li>
+                <li><a href="#">Object-Oriented Programming (OOP)</a></li>
+                <li><a href="#">Data Structures and Algorithms</a></li>
+                <li><a href="#">Database Management Systems</a></li>
+                <li><a href="#">Version Control with Git</a></li>
+                <li><a href="#">Software Testing and Debugging</a></li>
+                <li><a href="#">Agile Development Methodologies</a></li>
+                <li><a href="#">Building APIs with RESTful Services</a></li>
+                <li><a href="#">Cloud Computing and DevOps</a></li>
+            </ol>
+        </div>
+        <div class="column">
+            <ol>
+                <li>AI (Artificial Intelligence) Courses</li>
+                <li><a href="#">Introduction to Artificial Intelligence</a></li>
+                <li><a href="#">Machine Learning Basics</a></li>
+                <li><a href="#">Deep Learning with Neural Networks</a></li>
+                <li><a href="#">Natural Language Processing (NLP)</a></li>
+                <li><a href="#">Computer Vision with Python</a></li>
+                <li><a href="#">Reinforcement Learning</a></li>
+                <li><a href="#">AI in Robotics</a></li>
+                <li><a href="#">AI Ethics and Bias</a></li>
+                <li><a href="#">Data Science and AI</a></li>
+                <li><a href="#">Building AI Models with TensorFlow</a></li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

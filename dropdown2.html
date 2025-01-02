@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: grey;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            padding: 10px 50px;
+        }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: black;
+            margin: 0 10px;
+            font-size: 1em;
+        }
+        .nav-menu a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+            .nav-menu {
+                margin-top: 10px;
+            }
+        }
+        .container {
+            display: none;
+            height: 18vh;
+            width: 100px;
+            background-color: red;
+            color: black;
+            padding: 25px 10px;
+        }
+        .container.change {
+            display: flex;
+            align-content: end;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Company.Com</div>
+        <nav class="nav-menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Menu</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <div class="button-menu">
+            <button id="toggle-btn">Account</button>
+        </div>
+    </header>
+    <div class="container">
+        <ul>
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+            <li>Option 4</li>
+            <li>Option 5</li>
+        </ul>
+    </div>
+    <script>
+        let toggleBtn = document.getElementById('toggle-btn');
+        let container = document.querySelector('.container');
+
+        toggleBtn.addEventListener('click', function() {
+            container.classList.toggle('change');
+        });
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            border: 2px solid black;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        .column {
+            flex: 1;
+            border-right: 2px solid black;
+            padding: 10px;
+        }
+
+        .column:last-child {
+            border-right: none;
+        }
+
+        .column .item {
+            margin-bottom: 5px;
+        }
+
+        .column .item:first-child {
+            font-weight: bold;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="item">ITEM1</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+        </div>
+        <div class="column">
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">itemitem</div>
+        </div>
+        <div class="column">
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+        </div>
+    </div>
+</body>
+</html>
+ -->

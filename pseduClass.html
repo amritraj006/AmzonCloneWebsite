@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*<!-- for not visited links>*/
+        a:link {
+            color: green;
+        }
+        /*for already visited links*/
+        a:visited {
+            color: purple;
+        }
+        button {
+            background-color: aliceblue;
+
+        }
+        button:hover {
+            background-color: aqua;
+        }
+        button:active {
+            background-color: darkblue;
+            color: white;
+        }
+        .form-container:focus-within {
+            border: 2px solid green;
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <button>CLICK</button>
+    <a href="https://www.geeksforgeeks.org/css-pseudo-classes/?ref=lbp">CLICK ON THIS LINK</a>
+    <div class="form-container">
+        <input type="text" placeholder="Type here">
+    </div>
+</body>
+</html>

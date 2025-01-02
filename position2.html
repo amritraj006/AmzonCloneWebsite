@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+         
+            align-items: center;
+            border: 5px solid indianred;
+          
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+        .box1 {
+            position: sticky;
+            top: 2px;
+            bottom: 2px;
+           
+        }
+        .box:hover {
+            border: 1px black solid;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+    <script>
+        let container = document.querySelector(".container");
+        container.style.height = "1300px";
+        container.style.width = "100%";
+        
+        let box = document.querySelectorAll(".box");
+        const arr = ["red", "green", "white", "yellow"];
+        
+        let i = 0;
+        while (i < box.length) {
+            box[i].style.margin = "5px";
+            box[i].style.height = "270px";
+            box[i].style.width = "80%";
+            box[i].style.backgroundColor = arr[i];
+            
+            i++;
+        }
+    </script>
+</body>
+</html>
